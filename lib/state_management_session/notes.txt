@@ -1,0 +1,15 @@
+State Management Session
+1.Widget life cycle
+2.setState(){}
+   2.1. passing data.
+   2.2. rebuilt.
+   2.3. complex code in one file.
+3.State Management Approaches
+    3.1 setState(){} + InheritedWidget
+    3.2 Provider
+    3.3 Bloc (Business Logic Component) => Cubit
+            3.3.1 States
+            3.3.2 Cubit
+            3.3.3 Bloc Provider
+            3.3.4 Bloc Consumer
+            3.3.5 Bloc Observer
