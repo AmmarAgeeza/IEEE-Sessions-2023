@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'state_management_session/widget_life_cycle/life_cycle.dart';
+import 'state_management_session/counter_example/cubits/cubit.dart';
+import 'state_management_session/counter_example/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,12 +10,14 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'IEEE Sessions',
-      home: WidgetLifeCycle(),
+    return BlocProvider(
+      create: (_)=> CounterCubit(),
+      child: MaterialApp(
+        title: 'IEEE Sessions',
+        home: Counter(),
+      ),
     );
   }
 }
