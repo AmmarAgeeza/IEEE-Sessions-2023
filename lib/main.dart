@@ -1,8 +1,11 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ieee_sessions_2023/api_session/view_model/cubits/home_cubit/home_cubit.dart';
+import 'package:ieee_sessions_2023/api_session_part_2/core/services/service_locator.dart';
+import 'package:ieee_sessions_2023/api_session_part_2/features/login_feature/model/login_model.dart';
 
-import 'api_session/view/screens/home_screen/home_screen.dart';
+import 'api_session_part_2/features/login_feature/screens/login_screen.dart';
 import 'state_management_session/counter_example/cubits/cubit.dart';
 
 void main() async {
@@ -15,10 +18,24 @@ void main() async {
   //    response = jsonDecode(value.body);
   //    print(response[0]);
   //  }).catchError((e) => print(e.toString()));
-  // List<Model>modelData= response.map((e) => Model.fromJson(e)).toList();
+  // List<Model>modelData= response.maSp((e) => Model.fromJson(e)).toList();
   // print (modelData[0].title);
-  runApp(const MyApp());
 
+// https://leap-teck.vercel.app/api/v1/user/signup
+
+  await serviceLocatorInit();
+
+  // DioConsumer(client: Dio()).post(EndPoints.login, body: {
+  //   "email": "anas423995@gmail.com",
+  //   "password": "anas123",
+  // }).then((value) => print(value));
+
+  
+
+  //1.path
+  // 2. body
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -35,9 +52,9 @@ class MyApp extends StatelessWidget {
           create: (_) => HomeCubit()..getData(),
         )
       ],
-      child: const MaterialApp(
+      child:  MaterialApp(
         title: 'IEEE Sessions',
-        home: HomeScreen(),
+        home: Login(),
       ),
     );
   }
