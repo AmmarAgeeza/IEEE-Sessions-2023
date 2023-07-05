@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             children: [
               const Spacer(flex: 1,),
-              Row(children: const [
+              const Row(children: [
                 Spacer(flex: 1),
                 Text(
                   'Orange',

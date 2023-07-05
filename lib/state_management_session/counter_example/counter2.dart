@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ieee_sessions_2023/state_management_session/counter_example/cubits/cubit.dart';
-import 'package:ieee_sessions_2023/state_management_session/counter_example/cubits/cubit.dart';
-import 'package:ieee_sessions_2023/state_management_session/counter_example/home.dart';
 
 import 'cubits/state.dart';
 
@@ -23,7 +21,7 @@ class Counter2 extends StatelessWidget {
             width: 150,
             height: 150,
             child: Center(
-              child: Text(BlocProvider.of<CounterCubit>(context).counter.toString(), style: TextStyle(fontSize: 40)),
+              child: Text(BlocProvider.of<CounterCubit>(context).counter.toString(), style: const TextStyle(fontSize: 40)),
             ),
           ),
         );

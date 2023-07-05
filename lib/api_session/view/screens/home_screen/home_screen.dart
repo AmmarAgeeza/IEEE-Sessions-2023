@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       builder: (context, state) {
         final cubit = HomeCubit.get(context);
         print('someData');
-        HomeCubit().getData();
+        // HomeCubit().getData();
         return Scaffold(
           body: cubit.albums.isEmpty
               ? const Center(

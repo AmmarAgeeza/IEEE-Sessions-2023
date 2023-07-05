@@ -10,6 +10,8 @@ class Counter extends StatelessWidget {
 
   int numberOfBuild = 0;
 
+  Counter({super.key});
+
   @override
   Widget build(BuildContext context) {
     print('number= ${numberOfBuild++}');
